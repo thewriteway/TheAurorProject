@@ -31,7 +31,7 @@ variable "iso_checksum" {
 
 variable "iso_url" {
   type    = string
-  default = "Windows_SERVER_2022_EVAL_x64FRE_en-us.iso"
+  default = "SERVER_EVAL_x64FRE_en-us.iso"
 }
 
 variable "manually_download_iso_from" {
@@ -136,6 +136,6 @@ build {
   post-processor "vagrant" {
     keep_input_artifact  = false //artifact will be deleted
     output               = "windows_2022_{{.Provider}}.box"
-    vagrantfile_template = "vagrantfile-windows_2016.template"
+    vagrantfile_template = "vagrantfile-windows_2022.template"
   }
 }
